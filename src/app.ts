@@ -2,12 +2,23 @@ import cors from "cors";
 import express, { Express } from 'express';
 
 import { loadEnv, connectDb, disconnectDB } from '@/config';
+
 loadEnv();
+
+import { handleApplicationErrors } from '@/middlewares';
+import {
+  usersRouter
+} from '@/routers';
+
 
 const app = express()
 
 app.use(cors());
-app.use(express.json());
+app
+  .use(express.json())
+  .use('/users', usersRouter)
+  .use(handleApplicationErrors);
+  ;
 
 //app.use([]);
 
