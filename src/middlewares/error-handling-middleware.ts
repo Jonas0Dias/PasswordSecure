@@ -13,6 +13,16 @@ export function handleApplicationErrors(
       message: err.message,
     });
   }
+  if (err.name === 'tokenAlreadyExist') {
+    return res.status(httpStatus.BAD_REQUEST).send({
+      message: err.message,
+    });
+  }
+
+
+  
+
+
   
   if (err.name === 'CannotListHotelsError') {
     return res.status(httpStatus.PAYMENT_REQUIRED).send({
