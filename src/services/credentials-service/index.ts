@@ -46,13 +46,21 @@ async function findUniqueCredential(userId: number, credentialId: number): Promi
   return credential;
 }
 
+async function deleteCredentialById(userId: number, credentialId: number) {
+  const credential = await credentialRepository.deleteById(userId, credentialId)
+  if (!credential) throw notFoundError();
+  console.log(credential)
+}
+
+
 
 
 
 const credentialService = {
   createCredential,
   findAllCredentials,
-  findUniqueCredential
+  findUniqueCredential,
+  deleteCredentialById
 };
 
 export * from './errors';

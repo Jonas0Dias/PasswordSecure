@@ -40,6 +40,19 @@ async function findMany(userId: number) {
     });
   } 
 
+  async function deleteById(userId: number, credentialId: number) {
+    return prisma.credential.deleteMany({
+      where:{
+        id: credentialId,
+        userId,
+      }
+    });
+  } 
+
+  
+
+
+
   
 
 
@@ -47,7 +60,8 @@ async function findMany(userId: number) {
     findByTitle,
     create,
     findMany,
-    findById
+    findById,
+    deleteById
   };
   
 

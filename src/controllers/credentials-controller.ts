@@ -31,11 +31,9 @@ export async function credentialGetAll(req: AuthenticatedRequest, res: Response,
 
 
 export async function credentialGetById(req: AuthenticatedRequest, res: Response, next: NextFunction) {
-  console.log(req.params)
   try {
     const { userId } = req;
     const credentialId =  Number(req.params.credentialId)
-    console.log(credentialId)
 
     const searchCredentialById = await credentialService.findUniqueCredential(userId, credentialId);
     return res.status(httpStatus.OK).json(
@@ -46,6 +44,19 @@ export async function credentialGetById(req: AuthenticatedRequest, res: Response
   }
 }
 
+export async function deleteCredentialById(req: AuthenticatedRequest, res: Response, next: NextFunction) {
+  try {
+    const { userId } = req;
+    const credentialId =  Number(req.params.credentialId)
+
+    const deleteCredentialById = await credentialService.deleteCredentialById(userId, credentialId);
+    return res.status(httpStatus.OK).json(
+      deleteCredentialById
+    );
+  }  catch (e) {
+      next(e);
+  }
+}
 
 
 
