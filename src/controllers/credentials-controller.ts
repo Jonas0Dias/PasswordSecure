@@ -16,3 +16,40 @@ export async function credentialPost(req: AuthenticatedRequest, res: Response, n
       next(e);
   }
 }
+
+export async function credentialGetAll(req: AuthenticatedRequest, res: Response, next: NextFunction) {
+  const { userId } = req;
+  try {
+    const searchAllCredentials = await credentialService.findAllCredentials(userId);
+    return res.status(httpStatus.OK).json(
+      searchAllCredentials
+    );
+  }  catch (e) {
+      next(e);
+  }
+}
+
+
+export async function credentialGetById(req: AuthenticatedRequest, res: Response, next: NextFunction) {
+  console.log(req.params)
+  try {
+    const { userId } = req;
+    const credentialId =  Number(req.params.credentialId)
+    console.log(credentialId)
+
+    const searchCredentialById = await credentialService.findUniqueCredential(userId, credentialId);
+    return res.status(httpStatus.OK).json(
+      searchCredentialById
+    );
+  }  catch (e) {
+      next(e);
+  }
+}
+
+
+
+
+
+
+
+

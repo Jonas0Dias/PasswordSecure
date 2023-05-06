@@ -12,10 +12,11 @@ async function create(data: Prisma.CredentialCreateManyInput): Promise<Credentia
 
 
 
-async function findByTitle(title: string) {
+async function findByTitle(title: string, userId:number) {
     return prisma.credential.findFirst({
       where:{
         title,
+        userId
       }
     });
   } 
@@ -30,11 +31,23 @@ async function findMany(userId: number) {
     });
   } 
 
+  async function findById(userId: number, credentialId: number) {
+    return prisma.credential.findFirst({
+      where:{
+        userId,
+        id: credentialId
+      }
+    });
+  } 
+
+  
+
 
   const credentialRepository = {
     findByTitle,
     create,
     findMany,
+    findById
   };
   
 
