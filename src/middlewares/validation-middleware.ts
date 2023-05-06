@@ -4,6 +4,7 @@ import { ObjectSchema } from 'joi';
 import { invalidDataError } from '@/errors';
 
 export function validateBody<T>(schema: ObjectSchema<T>): ValidationMiddleware {
+  console.log('teste schema')
   return validate(schema, 'body');
 }
 

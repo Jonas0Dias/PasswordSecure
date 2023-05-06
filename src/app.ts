@@ -8,7 +8,8 @@ loadEnv();
 import { handleApplicationErrors } from '@/middlewares';
 import {
   usersRouter,
-  authenticationRouter
+  authenticationRouter,
+  credentialRouter
 } from '@/routers';
 
 
@@ -19,6 +20,7 @@ app
   .use(express.json())
   .use('/users', usersRouter)
   .use('/signin', authenticationRouter)
+  .use('/credential', credentialRouter)
   .use(handleApplicationErrors);
   ;
 
