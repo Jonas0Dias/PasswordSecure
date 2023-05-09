@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1683658465909" clover="3.2.0">
+  <project timestamp="1683658465909" name="All files">
+    <metrics statements="313" coveredstatements="295" conditionals="35" coveredconditionals="21" methods="57" coveredmethods="47" elements="405" coveredelements="363" complexity="0" loc="313" ncloc="313" packages="16" files="44" classes="44"/>
+    <package name="src">
+      <metrics statements="15" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="app.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\app.ts">
+        <metrics statements="15" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.config">
+      <metrics statements="13" coveredstatements="12" conditionals="4" coveredconditionals="1" methods="3" coveredmethods="2"/>
+      <file name="database.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\config\database.ts">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="envs.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\config\envs.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\config\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.controllers">
+      <metrics statements="49" coveredstatements="47" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="authentication-controller.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\controllers\authentication-controller.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+      </file>
+      <file name="credentials-controller.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\controllers\credentials-controller.ts">
+        <metrics statements="30" coveredstatements="29" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="38" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\controllers\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+      <file name="users-controller.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\controllers\users-controller.ts">
+        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.errors">
+      <metrics statements="24" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+      <file name="cannot-enroll-before-start-date-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\cannot-enroll-before-start-date-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="conflict-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\conflict-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+      <file name="invalid-data-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\invalid-data-error.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+      </file>
+      <file name="invalid-email-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\invalid-email-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="not-found-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\not-found-error.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+      </file>
+      <file name="payment-required-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\payment-required-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="request-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\request-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="unauthorized-error.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\errors\unauthorized-error.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.middlewares">
+      <metrics statements="52" coveredstatements="46" conditionals="15" coveredconditionals="9" methods="8" coveredmethods="7"/>
+      <file name="authentication-middleware.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\middlewares\authentication-middleware.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="22" type="stmt"/>
+        <line num="10" count="22" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="13" count="18" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="18" type="stmt"/>
+        <line num="16" count="18" type="stmt"/>
+        <line num="18" count="14" type="stmt"/>
+        <line num="23" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="34" count="12" type="stmt"/>
+      </file>
+      <file name="error-handling-middleware.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\middlewares\error-handling-middleware.ts">
+        <metrics statements="20" coveredstatements="15" conditionals="10" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="11" count="8" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="17" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="7" type="cond" truecount="0" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="30" count="7" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="37" count="7" type="cond" truecount="2" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="43" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="49" count="4" type="cond" truecount="0" falsecount="1"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="55" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\middlewares\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+      <file name="validation-middleware.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\middlewares\validation-middleware.ts">
+        <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="16" type="stmt"/>
+        <line num="20" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="22" count="11" type="stmt"/>
+        <line num="24" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories.credential-repository">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\repositories\credential-repository\index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories.session-repository">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\repositories\session-repository\index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories.user-repository">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\repositories\user-repository\index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routers">
+      <metrics statements="25" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authentication-router.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\routers\authentication-router.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+      <file name="credential-router.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\routers\credential-router.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\routers\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+      <file name="users-router.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\routers\users-router.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schemas">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authentication-schemas.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\schemas\authentication-schemas.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+      <file name="credentials-schema.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\schemas\credentials-schema.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\schemas\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+      <file name="users-schemas.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\schemas\users-schemas.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.authentication-service">
+      <metrics statements="29" coveredstatements="28" conditionals="3" coveredconditionals="2" methods="6" coveredmethods="5"/>
+      <file name="errors.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\services\authentication-service\errors.ts">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\services\authentication-service\index.ts">
+        <metrics statements="25" coveredstatements="25" conditionals="3" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="18" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="47" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.credentials-service">
+      <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="6"/>
+      <file name="errors.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\services\credentials-service\errors.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\services\credentials-service\index.ts">
+        <metrics statements="26" coveredstatements="26" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="5"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="66" count="3" type="stmt"/>
+        <line num="67" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.users-service">
+      <metrics statements="15" coveredstatements="13" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="errors.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\services\users-service\errors.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\services\users-service\index.ts">
+        <metrics statements="13" coveredstatements="12" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="0" falsecount="1"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="prisma-utils.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\src\utils\prisma-utils.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="tests">
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="helpers.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\tests\helpers.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="24" type="stmt"/>
+        <line num="10" count="24" type="stmt"/>
+        <line num="11" count="24" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="10" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="tests.factories">
+      <metrics statements="18" coveredstatements="18" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
+      <file name="credentials-factory.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\tests\factories\credentials-factory.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\tests\factories\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+      <file name="sessions-factory.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\tests\factories\sessions-factory.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+      </file>
+      <file name="users-factory.ts" path="C:\Users\jonaa\Desktop\DRIVEN_T9\Modulo_5\projeto-drivenpass\tests\factories\users-factory.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="29" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="29" type="stmt"/>
+        <line num="10" count="29" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

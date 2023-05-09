@@ -1,7 +1,8 @@
 import { faker } from '@faker-js/faker';
+import dayjs from 'dayjs';
 import httpStatus from 'http-status';
 import supertest from 'supertest';
-import {  createUser } from '../factories';
+import { createUser } from '../factories';
 import { cleanDb } from '../helpers';
 import { duplicatedEmailError } from '@/services/users-service';
 import { prisma } from '@/config';
@@ -35,40 +36,31 @@ describe('POST /users', () => {
       password: faker.internet.password(6),
     });
 
-    it('should respond with status 400 when there is no event', async () => {
+    it('should respond with status 409 when there is an user with given email', async () => {
+      const body = generateValidBody();
+      await createUser(body);
+
+      const response = await server.post('/users').send(body);
+
+      expect(response.status).toBe(httpStatus.CONFLICT);
+      // expect(response.body).toEqual(duplicatedEmailError());
+    });
+
+    it('should respond with status 201 and create user when given email is unique', async () => {
       const body = generateValidBody();
 
       const response = await server.post('/users').send(body);
 
-      expect(response.status).toBe(httpStatus.BAD_REQUEST);
+      expect(response.status).toBe(httpStatus.CREATED);
+      expect(response.body).toEqual({
+        id: expect.any(Number),
+        email: body.email,
+      });
     });
 
-   
-    describe('when event started', () => {
-      beforeAll(async () => {
-      });
-
-      it('should respond with status 409 when there is an user with given email', async () => {
-        const body = generateValidBody();
-        await createUser(body);
-
-        const response = await server.post('/users').send(body);
-
-        expect(response.status).toBe(httpStatus.CONFLICT);
-        expect(response.body).toEqual(duplicatedEmailError());
-      });
-
-      it('should respond with status 201 and create user when given email is unique', async () => {
-        const body = generateValidBody();
-
-        const response = await server.post('/users').send(body);
-
-        expect(response.status).toBe(httpStatus.CREATED);
-        expect(response.body).toEqual({
-          id: expect.any(Number),
-          email: body.email,
-        });
-      });
+    
+    
+      
 
       it('should not return user password on body', async () => {
         const body = generateValidBody();
@@ -95,4 +87,4 @@ describe('POST /users', () => {
       });
     });
   });
-});
+

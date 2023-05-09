@@ -27,6 +27,7 @@ export async function createCredential(data: PostCredentialWithUserId) : Promise
 
 async function validateUniqueTitle(title: string, userId: number) {
   const alreadyExistTitle = await credentialRepository.findByTitle(title, userId);
+  console.log('test se ta entrando no validadeUniqueTitle')
   if (alreadyExistTitle) {
     throw titleAlreadyExist(); 
   }
@@ -34,8 +35,7 @@ async function validateUniqueTitle(title: string, userId: number) {
 
 async function findAllCredentials(userId: number): Promise<Credential[]> {
   const credential: Credential[] = await credentialRepository.findMany(userId)
-  if (!credential) throw notFoundError();
-  console.log(credential)
+  if (credential.length===0) throw notFoundError();
   return credential;
 }
 

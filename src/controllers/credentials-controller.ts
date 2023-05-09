@@ -34,6 +34,8 @@ export async function credentialGetById(req: AuthenticatedRequest, res: Response
   try {
     const { userId } = req;
     const credentialId =  Number(req.params.credentialId)
+    
+    if(!credentialId) return res.status(httpStatus.BAD_REQUEST) 
 
     const searchCredentialById = await credentialService.findUniqueCredential(userId, credentialId);
     return res.status(httpStatus.OK).json(
