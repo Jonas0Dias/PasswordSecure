@@ -1,4 +1,4 @@
-import { User, Credential } from "@prisma/client";
+import { User, Credential, Network } from "@prisma/client";
 
 
 export type ApplicationError = {
@@ -17,9 +17,17 @@ export type RequestError = {
 };
 
 export type UserWithoutId = Omit<User, 'id'>;
+
 export type CredentialWithoutId = Omit<Credential, 'id'>;
 export type PostCredential = Pick<Credential, 'url' | 'username' | 'password' | 'title'>;
 export type PostCredentialWithUserId = PostCredential & {
+  userId: number;
+}
+
+
+export type NetworkWithouId = Omit<Network, 'id'>;
+export type PostNetwork = Pick<Network, 'network' | 'password' | 'title'>;
+export type PostNetworkWithUserId = PostNetwork & {
   userId: number;
 }
 

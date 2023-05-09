@@ -9,7 +9,8 @@ import { handleApplicationErrors } from '@/middlewares';
 import {
   usersRouter,
   authenticationRouter,
-  credentialRouter
+  credentialRouter,
+  networkRouter,
 } from '@/routers';
 
 
@@ -21,6 +22,7 @@ app
   .use('/users', usersRouter)
   .use('/signin', authenticationRouter)
   .use('/credential', credentialRouter)
+  .use('/network', networkRouter)
   .use(handleApplicationErrors);
   ;
 

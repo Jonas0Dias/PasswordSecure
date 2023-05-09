@@ -5,6 +5,9 @@ import supertest from 'supertest';
 import {createUser, createCredential} from '../factories';
 import { cleanDb, generateValidToken } from '../helpers';
 import app, { init } from '@/app';
+import { createNetwork } from '../factories';
+import { Network } from '@prisma/client';
+import { PostNetwork } from '@/protocols';
 
 beforeAll(async () => {
   await init();
@@ -16,9 +19,9 @@ beforeEach(async () => {
 
 const server = supertest(app);
 
-describe('GET /credential', () => {
+describe('GET /network', () => {
   it('should respond with status 401 if no token is given', async () => {
-    const response = await server.get('/credential');
+    const response = await server.get('/network');
 
     expect(response.status).toBe(httpStatus.UNAUTHORIZED);
   });
@@ -26,7 +29,7 @@ describe('GET /credential', () => {
   it('should respond with status 401 if given token is not valid', async () => {
     const token = faker.lorem.word();
 
-    const response = await server.get('/credential').set('Authorization', `Bearer ${token}`);
+    const response = await server.get('/network').set('Authorization', `Bearer ${token}`);
 
     expect(response.status).toBe(httpStatus.UNAUTHORIZED);
   });
@@ -35,33 +38,32 @@ describe('GET /credential', () => {
     const userWithoutSession = await createUser();
     const token = jwt.sign({ userId: userWithoutSession.id }, process.env.JWT_SECRET);
 
-    const response = await server.get('/credential').set('Authorization', `Bearer ${token}`);
+    const response = await server.get('/network').set('Authorization', `Bearer ${token}`);
 
     expect(response.status).toBe(httpStatus.UNAUTHORIZED);
 });
 
     describe('when token is valid', () => {
-        it('should respond with status 404 if there is no credential for given userId', async () => {
+        it('should respond with status 404 if there is no network for given userId', async () => {
             const user = await createUser();
             const token = await generateValidToken(user);
-            const response = await server.get('/credential').set('Authorization', `Bearer ${token}`);
+            const response = await server.get('/network').set('Authorization', `Bearer ${token}`);
             expect(response.status).toEqual(httpStatus.NOT_FOUND);
         });
     
-        it('should respond with status 200 when there is credential', async () => {
+        it('should respond with status 200 when there is network', async () => {
           const user = await createUser();
           const token = await generateValidToken(user);
 
           const data = {
             title: faker.name.jobTitle(),
-            url: 'www.fake.com.br',
-            username:faker.name.findName(),
+            network: 'sdfgsfdf',
             password: faker.name.findName(),
             userId: user.id,
           }
-          await createCredential(data);
+          await createNetwork(data);
 
-         const response = await server.get('/credential').set('Authorization', `Bearer ${token}`);
+         const response = await server.get('/network').set('Authorization', `Bearer ${token}`);
          expect(response.status).toEqual(httpStatus.OK);
         });
 
@@ -69,9 +71,9 @@ describe('GET /credential', () => {
       });
   })
 
-  describe('GET /credential/:credentialId', () => {
+  describe('GET /network/:networkId', () => {
     it('should respond with status 401 if no token is given', async () => {
-      const response = await server.get('/credential/1');
+      const response = await server.get('/network/1');
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
     });
@@ -79,7 +81,7 @@ describe('GET /credential', () => {
     it('should respond with status 401 if given token is not valid', async () => {
       const token = faker.lorem.word();
   
-      const response = await server.get('/credential/1').set('Authorization', `Bearer ${token}`);
+      const response = await server.get('/network/1').set('Authorization', `Bearer ${token}`);
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
     });
@@ -88,57 +90,54 @@ describe('GET /credential', () => {
       const userWithoutSession = await createUser();
       const token = jwt.sign({ userId: userWithoutSession.id }, process.env.JWT_SECRET);
   
-      const response = await server.get('/credential/1').set('Authorization', `Bearer ${token}`);
+      const response = await server.get('/network/1').set('Authorization', `Bearer ${token}`);
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
   });
   
       describe('when token is valid', () => {
-          it('should respond with status 404 if there is no credential for given userId', async () => {
+          it('should respond with status 404 if there is no network for given userId', async () => {
               const user = await createUser();
               const token = await generateValidToken(user);
 
-              const response = await server.get('/credential/1').set('Authorization', `Bearer ${token}`);
+              const response = await server.get('/network/1').set('Authorization', `Bearer ${token}`);
               expect(response.status).toEqual(httpStatus.NOT_FOUND);
           });
-          it('should respond with status 404 if credentialId doesnt exist', async () => {
+          it('should respond with status 404 if networkId doesnt exist', async () => {
             const user = await createUser();
             const token = await generateValidToken(user);
 
             const data = {
-              title: faker.name.jobTitle(),
-              url: 'https://www.fake.com.br',
-              username:faker.name.findName(),
-              password: faker.name.findName(),
-              userId: user.id,
-            }
-            await createCredential(data);
+                title: faker.name.jobTitle(),
+                network: 'www.fake.com.br',
+                password: faker.name.findName(),
+                userId: user.id,
+              }
+            await createNetwork(data);
 
-            const response = await server.get('/credential/-1').set('Authorization', `Bearer ${token}`);
+            const response = await server.get('/network/-1').set('Authorization', `Bearer ${token}`);
             expect(response.status).toEqual(httpStatus.NOT_FOUND);
         });
 
-        it('should respond with status 200 when there is credential', async () => {
+        it('should respond with status 200 when there is network', async () => {
           const user = await createUser();
           const token = await generateValidToken(user);
 
           const data = {
             title: faker.name.jobTitle(),
-            url: 'https://www.fake.com.br',
-            username:faker.name.findName(),
+            network: 'www.fake.com.br',
             password: faker.name.findName(),
             userId: user.id,
           }
-          const credential = await createCredential(data);
+        const network = await createNetwork(data);
 
-         const response = await server.get(`/credential/${credential.id}`).set('Authorization', `Bearer ${token}`);
+         const response = await server.get(`/network/${network.id}`).set('Authorization', `Bearer ${token}`);
          expect(response.status).toEqual(httpStatus.OK);
          expect(response.body).toEqual({
-          id:credential.id,
+          id:network.id,
           title: data.title,
-          url: data.url,
-          username:data.username,
-          password: data.password,
+          network: data.network,
+          password: expect.any(String),
           userId: user.id,
          })
         });
@@ -146,9 +145,9 @@ describe('GET /credential', () => {
     })
 
 
-  describe('POST /credential', () => {
+  describe('POST /network', () => {
     it('should respond with status 401 if no token is given', async () => {
-      const response = await server.post('/credential');
+      const response = await server.post('/network');
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
     });
@@ -156,7 +155,7 @@ describe('GET /credential', () => {
     it('should respond with status 401 if given token is not valid', async () => {
       const token = faker.lorem.word();
   
-      const response = await server.post('/credential').set('Authorization', `Bearer ${token}`);
+      const response = await server.post('/network').set('Authorization', `Bearer ${token}`);
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
     });
@@ -165,7 +164,7 @@ describe('GET /credential', () => {
       const userWithoutSession = await createUser();
       const token = jwt.sign({ userId: userWithoutSession.id }, process.env.JWT_SECRET);
   
-      const response = await server.post('/credential').set('Authorization', `Bearer ${token}`);
+      const response = await server.post('/network').set('Authorization', `Bearer ${token}`);
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
     });
@@ -175,7 +174,7 @@ describe('GET /credential', () => {
         const user = await createUser();
         const token = await generateValidToken(user);
 
-        //body withou a url
+       
         const invalidBody = {
           title: faker.name.jobTitle(),
           username:faker.name.findName(),
@@ -184,50 +183,47 @@ describe('GET /credential', () => {
         }
   
   
-        const response = await server.post('/credential').set('Authorization', `Bearer ${token}`).send(invalidBody);
+        const response = await server.post('/network').set('Authorization', `Bearer ${token}`).send(invalidBody);
   
         expect(response.status).toEqual(httpStatus.BAD_REQUEST);
       });
   
-      it('should respond with status 409 if already exist a credential with this title', async () => {
+      it('should respond with status 409 if already exist a network with this title', async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
 
 
-        const credentialOne = {
-          title: 'MESMOTITULO',
-          url: 'http://www.fake1.com.br',
-          username:faker.name.findName(),
-          password: faker.name.findName(),
-          userId: user.id,
-        }
+        const networkOne = {
+            title: 'MESMOTITULO',
+            network: 'aaaaaa',
+            password: faker.name.findName(),
+            userId: user.id,
+          }
+        await createNetwork(networkOne);
 
-        await createCredential(credentialOne)
-
-        const credentialTwo = {
+        const networkTwo : PostNetwork = {
           title: 'MESMOTITULO',
-          url: 'http://www.fake2.com.br',
-          username:faker.name.findName(),
+          network: 'aaaaaa2',
           password: faker.name.findName(),
         }
   
   
-        const response = await server.post('/credential').set('Authorization', `Bearer ${token}`).send(credentialTwo);
+        const response = await server.post('/network').set('Authorization', `Bearer ${token}`).send(networkTwo);
   
         expect(response.status).toEqual(httpStatus.CONFLICT);
       });
 
-      it('should respond with status 200 when acredential was created', async () => {
+      it('should respond with status 200 when a network was created', async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
 
         const data = {
-          title: faker.name.jobTitle(),
-          url: 'https://www.fake.com.br',
-          username:faker.name.findName(),
-          password: faker.name.findName(),
-        }
-       const response = await server.post('/credential').set('Authorization', `Bearer ${token}`).send(data);
+            title: faker.name.jobTitle(),
+            network: 'aaaaaa',
+            password: faker.name.findName(),
+          }
+
+       const response = await server.post('/network').set('Authorization', `Bearer ${token}`).send(data);
        expect(response.status).toEqual(httpStatus.CREATED);
       });
 
@@ -246,9 +242,9 @@ describe('GET /credential', () => {
 
 
 
-  describe('DELETE /credential', () => {
+  describe('DELETE /network', () => {
     it('should respond with status 401 if no token is given', async () => {
-      const response = await server.delete('/credential/1');
+      const response = await server.delete('/network/1');
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
     });
@@ -257,7 +253,7 @@ describe('GET /credential', () => {
 
       const token = faker.lorem.word();
 
-      const response = await server.delete('/credential/1').set('Authorization', `Bearer ${token}`);
+      const response = await server.delete('/network/1').set('Authorization', `Bearer ${token}`);
 
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
 
@@ -269,7 +265,7 @@ describe('GET /credential', () => {
 
       const token = jwt.sign({ userId: userWithoutSession.id }, process.env.JWT_SECRET);
   
-      const response = await server.delete('/credential/1').set('Authorization', `Bearer ${token}`);
+      const response = await server.delete('/network/1').set('Authorization', `Bearer ${token}`);
   
       expect(response.status).toBe(httpStatus.UNAUTHORIZED);
 
@@ -277,20 +273,19 @@ describe('GET /credential', () => {
   
     describe('when token is valid', () => {
 
-      it('should respond with status 404 if credentialId doesnt exist', async () => {
+      it('should respond with status 404 if networkId doesnt exist', async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
 
         const data = {
-          title: faker.name.jobTitle(),
-          url: 'https://www.fake.com.br',
-          username:faker.name.findName(),
-          password: faker.name.findName(),
-          userId: user.id,
-        }
-        await createCredential(data);
+            title: faker.name.jobTitle(),
+            network: 'aaaaaa',
+            password: faker.name.findName(),
+            userId: user.id,
+          }
+        await createNetwork(data);
 
-        const response = await server.delete('/credential/-1').set('Authorization', `Bearer ${token}`);
+        const response = await server.delete('/network/-1').set('Authorization', `Bearer ${token}`);
         expect(response.status).toEqual(httpStatus.NOT_FOUND);
     });
   
@@ -300,14 +295,13 @@ describe('GET /credential', () => {
 
       const data = {
         title: faker.name.jobTitle(),
-        url: 'https://www.fake.com.br',
-        username:faker.name.findName(),
+        network: 'aaaaaa',
         password: faker.name.findName(),
         userId: user.id,
       }
-      const credential = await createCredential(data);
+      const network = await createNetwork(data);
 
-     const response = await server.delete(`/credential/${credential.id}`).set('Authorization', `Bearer ${token}`);
+     const response = await server.delete(`/network/${network.id}`).set('Authorization', `Bearer ${token}`);
      expect(response.status).toEqual(httpStatus.OK);
     });
       
